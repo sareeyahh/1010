@@ -1,7 +1,5 @@
-import tkinter as tk
-from gui import BudgetGUI
+import os
+from gui import start_gui
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = BudgetGUI(root)
-    root.mainloop()
+    start_gui()
