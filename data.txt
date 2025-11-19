@@ -1,0 +1,8 @@
+Grocery
+milk : $123.00
+eggs : $23.00
+cheese : $3243242.00
+
+Car
+oil : $45.00
+gas : $34.00
