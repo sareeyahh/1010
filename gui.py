@@ -1,4 +1,3 @@
-
 class BudgetGUI:
     def __init__(self, root):
         self.root = root
@@ -50,3 +49,4 @@ class BudgetGUI:
         self.output_box.pack(pady=10)
 
         tk.Button(root, text="Calculate Balance", command=self.calculate_balance).pack(pady=10)
+
