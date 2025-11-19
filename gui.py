@@ -9,20 +9,13 @@ class BudgetGUI:
         self.root = root
         self.root.title("BudgetBuddy")
 
-        # Data
         self.grocery = Budget("Grocery")
         self.car = Budget("Car")
         self.total_income = 0
         self.user_name = ""
 
-        # ------------------------
-        # TITLE
-        # ------------------------
         tk.Label(root, text="BudgetBuddy", font=("Arial", 22, "bold")).pack(pady=10)
 
-        # ------------------------
-        # NAME INPUT
-        # ------------------------
         name_frame = tk.Frame(root)
         name_frame.pack(pady=5)
 
@@ -32,9 +25,6 @@ class BudgetGUI:
 
         tk.Button(name_frame, text="Submit", command=self.save_name).grid(row=0, column=2, padx=10)
 
-        # ------------------------
-        # INCOME INPUT
-        # ------------------------
         income_frame = tk.Frame(root)
         income_frame.pack(pady=5)
 
@@ -44,9 +34,6 @@ class BudgetGUI:
 
         tk.Button(income_frame, text="Save Income", command=self.save_income).grid(row=0, column=2, padx=10)
 
-        # ------------------------
-        # EXPENSE ENTRY AREA
-        # ------------------------
         exp_frame = tk.LabelFrame(root, text="Add Expenses", padx=10, pady=10)
         exp_frame.pack(pady=10)
 
@@ -64,17 +51,11 @@ class BudgetGUI:
 
         tk.Button(exp_frame, text="Add Expense", command=self.add_expense).grid(row=3, column=0, columnspan=2, pady=5)
 
-        # ------------------------
-        # OUTPUT BOX
-        # ------------------------
         self.output_box = tk.Text(root, width=50, height=15, borderwidth=2, relief="sunken")
         self.output_box.pack(pady=10)
 
         tk.Button(root, text="Calculate Balance", command=self.calculate_balance).pack(pady=10)
 
-    # ------------------------
-    # FUNCTIONS
-    # ------------------------
 
     def save_name(self):
         self.user_name = self.name_entry.get()
